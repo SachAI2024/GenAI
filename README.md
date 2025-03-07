@@ -4,6 +4,18 @@
 
 One of the challenges in creating good embeddings is the quality and diversity of the training data. Embeddings represent words based on their context in the training data. So, if the data is biased, if it lacks diversity, or if it contains errors, then the resulting embeddings will be inaccurate or unfair. Ensuring that the training data encompasses a broad range of linguistic styles, dialects, and expressions is essential for developing chatbots that are capable of understanding a diverse user base.
 
+## Understanding Embeddings
+Embeddings solve the problem of not being able to define the semantic relationships between workds because embedding allows us to calculate the disctance between the various words. It is calculated during model training whereby the algorithm analuzes the occurence of words in the paragraphm or in other words, the concurrence patterns of words. Once the patterns are identified and isolated, the algorithm represents the words as vectors. These vectors are , in gfacet coordinates in a multi dimensional space, which allows us to calculate the distance to words. Therefre, to calculate the semantic relationship between words, the aldorithm groups words with respect to their nearest neighbor.
+
+
+![alt text](image.png)
+
+
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
 ## Computational Challenges
 ### Vector Space Complexity
 Embeddings represent words in a high-dimensional vector space so as to capture semantic relationships, but this introduces computational challenges. Managing the complexity of vectors in high-dimensional spaces requires careful consideration of the model architecture and parameters. 
