@@ -132,14 +132,14 @@ LLMs are opaque-box models. It is extremely difficult to interpret their results
 The answers are, in fact, sampling over a probability distribution, whereby the model selects the best probable word that follows the preceding word to generate text or predictions. That is why it is difficult to understand how the text was generated.
 
 ## Hallucinations
-![alt text](image.png)
+![alt text](./asset/hallucination.png)
 
 
 ## Grounding Method
 Grounding methods consist of limiting the interaction of the model to a certain type of data or augmenting the model’s data with specific domain knowledge, which is referred to as retrieval-augmented generation or RAG. Retrieval augmented generation is a method designed to enhance the reliability and accuracy of LLMs by combining the generative capabilities of LLMs with the precision of information retrieval. This approach involves augmenting the model’s training data with specific domain knowledge to ground the model by limiting its search to factual and relevant information. During the inference phase, RAG queries a database or corpus of documents to retrieve contextually relevant information before generating a response.
 
 ## RAG Flow 
-![alt text](image-1.png) 
+![alt text](./asset/llm-rag.png) 
 
 ## Context length
 The context length refers to the maximum length of the vector that can be injected into the LLMs as input. Context length can be 16k, 24k, or 32k for example. The larger the context length, the more processing power and GPUs are needed to run the models, and we can imagine that we are always limited by the latest available capacity and computational power of the available computers.
