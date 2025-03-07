@@ -63,65 +63,11 @@ The **transformers** library can perform embedding and positional encoding simul
 Hugging Face has a really easy-to-use Python function for using transformers. pipeline is a function that can take a task, a model, and a tokenizer and pipe them all to produce the desired output. There are many tasks in natural language processing, including text classification, question answering, translation, and text generation. When we choose a model or task in Hugging Face, we click it and check the provided code that illustrates how to use that specific model with transformers.
 
 
-
-## Try Example : 
-Exercise 1
-Transformers can be used for a variety of tasks. In the following code, we will implement sentiment analysis to classify whether a sentence has a positive, neutral, or negative meaning. Complete the code by following the instructions below:
-
-Click the button below to launch the app. Once the app is launched, wait until the kernel starts. In the top-right corner, Python 3 (ipykernel) will show once the Notebook is ready to start. Run the cells inside the Jupyter Notebook and experiment by changing the text or the parameters in the Notebook.
-
-Define the task as text classification.
-
-Write the sentence to be tokenized and embedded.
-
-Define the embedding by piping the sentence.
-
 ## Challenges and considerations #
 
 Implementing positional encoding in transformer models presents a few challenges and considerations. These challenges arise from the need to balance the effectiveness of the positional encoding in capturing the order of the words with the model’s performance and semantic meaning. Positional encodings should not overshadow the semantic meaning of the words themselves because the embeddings provide essential information about the meaning and context of the words. Finding the correct balance requires tuning the magnitude and representation of the encodings.
 
 The sine and cosine functions in positional encodings represent positions as a function of their relation to one another. However, as sequences become longer, distinguishing between further positions based only on these functions becomes challenging. This is the area where we see transformers struggling to handle long documents or conversations, but day after day, transformers are getting enhanced with longer context lengths. Moreover, positional encodings add an additional step in the data preprocessing pipeline, which impacts the overall computational efficiency of the training and the inference process. Positional encodings are calculated for each word in the sequence for every input, which can be computationally demanding for real-time applications such as conversational chatbots.
-
-## quiz
-1. An online platform automatically tags uploaded articles as Sports, Politics, or Fashion. What technology is being used here?
-A. Text summarization
-B. Entity extraction
-C. Text classification
-D. Speech-to-text conversion
-
-2. An online platform extracts names, dates, and locations from news invoices. What technology is being used here?
-A. Entity extraction
-B. Text classification
-C. Text-to-speech conversion
-D. Machine translation
-
-3. Which statement is true for the transformer’s encoder-decoder architecture?
-A. The encoder maps the input text to a vector representation, and the decoder translates this into an output sequence.
-B. The encoder outputs the final prediction, and the decoder provides a probability distribution over the next possible word.
-C. The encoder is only used during training, while the decoder is used during inference.
-D. The decoder operates independently of the encoder and does not utilize its outputs.
-
-4. What is the purpose of tokenization in the context of natural language processing and transformers?
-A. To add semantic information to the tokens
-B. To add the position of each token in the text
-C. To divide the text into a list of tokens or words
-**Tokenization is the process of converting text into words or tokens.**
-D.To convert the tokens in the text to vectors
-
-
-5. What does embedding represent in a transformer model?
-A. The frequency of each token in the text
-B. The grammatical category of each token
-C. The position of each token in the sentence
-D. High-dimensional space representations of tokens that the model can interpret and process
-
-
-6. Why is positional encoding added to embeddings in a transformer model?
-A. To give the model information about the sequence order of the tokens
-B. To reduce the dimensionality of the embeddings
-C. To ensure all vectors have the same length
-D. To increase the sentence complexity for better training
-
 
 ## Scaling LLMs#
 However, we have to be careful when stating such a hypothesis because we are increasingly seeing smaller models reaching a quality, a capacity, and an understanding of the text that is just a bit below the large-scale models. This is primarily due to the quality of data that these smaller models are being trained on. This is an eye-opener because it demonstrates the famous saying: “Garbage in, garbage out.” In other words, when training a model on quality, cleaned, and filtered data, we can hypothetically achieve great results on par with the results achieved by a large-scale model.
